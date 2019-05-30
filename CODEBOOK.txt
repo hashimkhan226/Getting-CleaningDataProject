@@ -1,0 +1,16 @@
+CODEBOOK
+Please refer to README - ORIGINAL for the original full description of the dataset. In short, experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Each record of this experiment provides (dispersed among several files):
+======================================
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+In run_analysis.r, the following steps were taken:
+-Activity labels were added in to test and train datasets
+-Subject labels were added in to test and train datasets
+-Test and train datasets were combined into one
+-Only features relating to Mean and Standard Deviation were used, the rest of the features were removed from the dataset
+-Resulting dataset was converted into a dplyr table
+-The table was grouped by subject and then by activity and then the average was taken for each feature
